@@ -1,12 +1,9 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
+  "routes": [
     {
-      "source": "/.well-known/appspecific/(.*)",
-      "headers": [
-        { "key": "Content-Type", "value": "application/x-pem-file" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
+      "src": "/.well-known/appspecific/com.tesla.3p.public-key.pem",
+      "dest": "/.well-known/appspecific/com.tesla.3p.public-key.pem"
     }
   ]
+}
