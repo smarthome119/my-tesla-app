@@ -9,11 +9,4 @@
         { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/.well-known/appspecific/com.tesla.3p.public-key.pem",
-      "destination": "/.well-known/appspecific/com.tesla.3p.public-key.pem"
-    }
   ]
-}
