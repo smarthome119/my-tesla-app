@@ -1,11 +1,19 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "headers": [{
-    "source": "/.well-known/appspecific/(.*)",
-    "headers": [
-      {"key": "Content-Type", "value": "application/x-pem-file"},
-      {"key": "Access-Control-Allow-Origin", "value": "*"}
-    ]
-  }]
+  "headers": [
+    {
+      "source": "/.well-known/appspecific/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "application/x-pem-file" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/.well-known/appspecific/com.tesla.3p.public-key.pem",
+      "destination": "/.well-known/appspecific/com.tesla.3p.public-key.pem"
+    }
+  ]
 }
